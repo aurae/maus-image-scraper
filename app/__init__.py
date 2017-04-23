@@ -1,9 +1,9 @@
+import jsonschema
 from flask import Flask, request, jsonify
 from werkzeug.exceptions import HTTPException
 from werkzeug.http import HTTP_STATUS_CODES
-import jsonschema
 
-import config
+from app import config
 from app.models.objects import ScrapeRequest, ImageFormat
 
 # Setup application object
