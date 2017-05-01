@@ -8,4 +8,5 @@ Jinja2==2.9.6
 jsonschema==2.6.0
 MarkupSafe==1.0
 requests==2.13.0
+requests-cache==0.4.13
 Werkzeug==0.12.1

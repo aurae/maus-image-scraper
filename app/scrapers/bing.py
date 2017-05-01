@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from urllib.parse import urlencode
 import bs4
 from flask import json
@@ -43,7 +44,7 @@ class BingScraper(Scraper):
         if request.image_format:
             query_string["qft"] = BING_IMAGEFORMAT_TO_ASPECTRATIO[request.image_format]
 
-        bing_url = BING_BASE_URL + "?" + urlencode(query_string)
+        bing_url = BING_BASE_URL + "?" + urlencode(OrderedDict(query_string))
 
         # Fire the request and obtain the response
         bing_response = self.http_client.get(bing_url)

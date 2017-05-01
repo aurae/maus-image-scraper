@@ -1,9 +1,13 @@
 import requests
+import requests_cache
 
 from app.models.http import HttpClient, HttpResponse
 
 
 class RequestsHttpClient(HttpClient):
+    def __init__(self):
+        requests_cache.install_cache()
+
     def post(self, url, data):
         response = requests.post(url, json=data)
         return self._convert(response)
