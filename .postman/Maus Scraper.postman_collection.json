@@ -1,0 +1,31 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Maus Scraper",
+		"_postman_id": "8b33fb9e-da95-0ae2-9db9-65dafe36a14f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search Images",
+			"request": {
+				"url": "{{HOST}}:{{PORT}}{{APP_PATH}}/images",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\": \"test\",\n\t\"format\": \"square\",\n\t\"page\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
